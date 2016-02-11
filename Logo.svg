@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="1000"
+   viewBox="0 0 1000 1000"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Logo.svg"
+   inkscape:export-filename="D:\Library\Development\Git\40DaysOfAlmostHealth\StoreLogo.png"
+   inkscape:export-xdpi="27"
+   inkscape:export-ydpi="27">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-82.142857"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-page="true">
+    <sodipodi:guide
+       position="500,985.10925"
+       orientation="1,0"
+       id="guide4136" />
+    <sodipodi:guide
+       position="0,499.99999"
+       orientation="0,1"
+       id="guide4140" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-52.362161)">
+    <rect
+       style="opacity:1;fill:#b6d9e7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:12.10000038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4739"
+       width="1000"
+       height="1000"
+       x="0"
+       y="52.36216" />
+    <g
+       transform="matrix(1.530846,0,0,1.530846,162.18515,214.54732)"
+       id="g3"
+       style="fill:#ffffff">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 314.016,17.679 c -36.879,0 -70.09,16.419 -93.344,42.648 C 197.42,34.098 164.207,17.679 127.328,17.679 57.008,17.679 0,77.354 0,150.969 c 0,19.779 3.338,38.813 9.184,56.989 0,0 5.301,16.4 9.997,25.428 53.671,115.428 201.491,190.279 201.491,190.279 0,0 147.82,-74.852 201.491,-190.279 0,0 6.925,-15.38 9.997,-25.428 5.582,-18.26 9.184,-37.21 9.184,-56.989 0,-73.615 -57.008,-133.29 -127.328,-133.29 z"
+         id="path5"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>

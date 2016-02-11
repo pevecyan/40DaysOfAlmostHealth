@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="63311pevecyan.40Daysofalmosthealth" Publisher="CN=240B7125-7581-4191-99F1-C72434199178" Version="1.1.0.3" />
+  <mp:PhoneIdentity PhoneProductId="7ccfc2f4-37c8-41c8-aea7-b31d4b6e31dc" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>40 Days of almost health</DisplayName>
+    <PublisherDisplayName>pevecyan</PublisherDisplayName>
+    <Logo>Assets\Tiles\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="_40_Days_of_almost_health.App">
+      <m3:VisualElements DisplayName="40 Days of almost health" Square150x150Logo="Assets\Tiles\Square150x150Logo.png" Square44x44Logo="Assets\Tiles\SmallLogo.png" Description="40 Days of almost health" ForegroundText="light" BackgroundColor="transparent" ToastCapable="true">
+        <m3:DefaultTile Square71x71Logo="Assets\Tiles\Square71x71Logo.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\Tiles\SplashScreen.png" BackgroundColor="#b6d9e7" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
+      </m3:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+  </Capabilities>
+</Package>

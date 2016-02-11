@@ -1,0 +1,161 @@
+﻿<Page
+    x:Class="_40_Days_of_almost_health.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_40_Days_of_almost_health"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Page.Resources>
+		<Storyboard x:Name="background1Move">
+			<DoubleAnimation x:Name="background1MoveAnimation" Duration="0:0:0.5" To="320" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="bg3">
+				<DoubleAnimation.EasingFunction>
+					<QuarticEase EasingMode="EaseInOut"/>
+				</DoubleAnimation.EasingFunction>
+			</DoubleAnimation>
+		</Storyboard>
+		<Storyboard x:Name="background2Move">
+            <DoubleAnimation  x:Name="background2MoveAnimation" Duration="0:0:0.5" To="120" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="bg2">
+				<DoubleAnimation.EasingFunction>
+					<QuarticEase EasingMode="EaseInOut"/>
+				</DoubleAnimation.EasingFunction>
+			</DoubleAnimation>
+		</Storyboard>
+		<Storyboard x:Name="background3Move">
+            <DoubleAnimation x:Name="background3MoveAnimation" Duration="0:0:0.5" To="80" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="bg1" d:IsOptimized="True">
+				<DoubleAnimation.EasingFunction>
+					<QuarticEase EasingMode="EaseInOut"/>
+				</DoubleAnimation.EasingFunction>
+			</DoubleAnimation>
+		</Storyboard>
+	</Page.Resources>
+
+    <Grid x:Name="ContentGrid" Background="#FFD5EDF7">
+    	<Grid x:Name="BackgroundGrid" Margin="0,0,-300,0" Background="#FFD5EDF7">
+    		<Image x:Name="bg1" Margin="0" Source="Assets/Backgrounds/Background1.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" Width="720">
+    			<Image.RenderTransform>
+    				<CompositeTransform/>
+    			</Image.RenderTransform>
+    		</Image>
+    		<Image x:Name="bg2" Margin="0" Source="Assets/Backgrounds/Background2.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" Width="720">
+    			<Image.RenderTransform>
+    				<CompositeTransform/>
+    			</Image.RenderTransform>
+    		</Image>
+    		<Image x:Name="bg3" Margin="0" Source="Assets/Backgrounds/Background3.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5" Width="720">
+    			<Image.RenderTransform>
+    				<CompositeTransform/>
+    			</Image.RenderTransform>
+    		</Image>
+    	</Grid>
+    	<Pivot x:Name="MainPivot" Margin="0" Title="" SelectionChanged="MainPivot_SelectionChanged" RequestedTheme="Light">
+    		<PivotItem Header="Danes">
+    			<Grid>
+    				<Grid x:Name="NewGrid" Margin="10,30,10,10" d:IsHidden="True">
+    					<StackPanel Orientation="Vertical">
+    						<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Nisi še začel beležiti!" VerticalAlignment="Top" FontSize="24"/>
+    						<Grid Margin="0,20,0,0">
+    							<StackPanel>
+    								<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Datum začetka" VerticalAlignment="Top" FontSize="16" Foreground="#FF5A5A5A"/>
+    								<DatePicker x:Name="SetDatePicker" VerticalAlignment="Top" RequestedTheme="Light" Margin="0" DayFormat="{}{day.integer(2)}"/>
+    							</StackPanel>
+    						</Grid>
+    						<Grid Margin="0,20,-0.333,0">
+    							<StackPanel>
+    								<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Dni trajanja" VerticalAlignment="Top" FontSize="16" Foreground="#FF5A5A5A"/>
+    								<TextBox x:Name="SetLengthTextBox" TextWrapping="Wrap" Text="40" RequestedTheme="Light" Background="{x:Null}" BorderBrush="Black" InputScope="Number"/>
+    							</StackPanel>
+    						</Grid>
+    						<Grid Margin="0,20,0,0">
+    							<StackPanel>
+    								<Button x:Name="SetStartButton" Content="Nastavi začetek" HorizontalAlignment="Stretch" Height="80" Margin="0" VerticalAlignment="Stretch" Click="SetStartButton_Click"/>
+    							</StackPanel>
+    						</Grid>
+    					</StackPanel>
+    				</Grid>
+    				<Grid x:Name="NotYet" Margin="10,30,10,10" Visibility="Collapsed" d:IsHidden="True">
+    					<StackPanel Orientation="Vertical">
+    						<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Še malo..." VerticalAlignment="Top" FontSize="24"/>
+    						<Grid Margin="0,20,0,0">
+    							<StackPanel>
+    								<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Datum začetka" VerticalAlignment="Top" FontSize="16" Foreground="#FF5A5A5A"/>
+    								<DatePicker x:Name="GetDatePicker" VerticalAlignment="Top" RequestedTheme="Light" Margin="0" DayFormat="{}{day.integer(2)}" MonthFormat="{}{month.integer}" DayVisible="False" Foreground="Black" IsEnabled="False"/>
+    							</StackPanel>
+    						</Grid>
+    					</StackPanel>
+    				</Grid>
+    				<Grid x:Name="Current" Margin="10,30,10,10">
+    					<StackPanel Orientation="Vertical">
+    						<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Si se danes že pregrešil?" VerticalAlignment="Top" FontSize="24"/>
+    						<Grid Margin="0,20,0,0">
+    							<StackPanel Margin="10,0" HorizontalAlignment="Left">
+    								<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+    									<ToggleButton x:Name="ToggleButton1" Content="🍰" Height="110" Width="100" MinWidth="0" MinHeight="0" FontSize="60" Click="ToggleButtonClick"/>
+    									<ToggleButton x:Name="ToggleButton2" Content="🍬" Height="110" Width="100" MinWidth="0" MinHeight="0" FontSize="60" Margin="10,0,0,0" Click="ToggleButtonClick"/>
+    									<ToggleButton x:Name="ToggleButton3" Content="🍫" Height="110" Width="100" MinWidth="0" MinHeight="0" FontSize="60" Margin="10,0,0,0" Click="ToggleButtonClick"/>
+    								</StackPanel>
+    								<StackPanel Margin="0" Orientation="Horizontal" HorizontalAlignment="Center">
+    									<ToggleButton x:Name="ToggleButton4" Content="🍔" Height="110" Width="100" MinWidth="0" MinHeight="0" FontSize="60" Margin="0" Click="ToggleButtonClick"/>
+    									<ToggleButton x:Name="ToggleButton5" Content="🍸" Height="110" Width="100" MinWidth="0" MinHeight="0" FontSize="60" Margin="10,0,0,0" Click="ToggleButtonClick"/>
+    									<ToggleButton x:Name="ToggleButton6" Content="🍕" Height="110" Width="100" MinWidth="0" MinHeight="0" FontSize="60" Margin="10,0,0,0" Click="ToggleButtonClick"/>
+    								</StackPanel>
+    								<ToggleButton x:Name="ToggleButton0" Content="🍎" Margin="0,20,0,0" HorizontalAlignment="Stretch" FontSize="66.667" Click="ToggleButtonClick"/>
+    							</StackPanel>
+    						</Grid>
+    					</StackPanel>
+    				</Grid>
+    			</Grid>
+    		</PivotItem>
+    		<PivotItem Header="Stanje">
+    			<Grid>
+    				<Grid Height="140" VerticalAlignment="Top">
+    					<StackPanel Margin="0"><TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Do konca še " VerticalAlignment="Top" Foreground="#FF5A5A5A" FontSize="26.667" Margin="0"/>
+    						<TextBlock x:Name="DaysLeftTextBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="∞" VerticalAlignment="Top" Foreground="#FF323232" FontSize="46.667" FontWeight="Bold" Margin="0"/>
+    						<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="dni" VerticalAlignment="Top" Foreground="#FF5A5A5A" FontSize="24" Margin="0"/>
+    					</StackPanel>
+    				</Grid>
+    				<Grid Margin="0,140,0,0">
+    					<Grid HorizontalAlignment="Left" Margin="0" Width="20" Background="#7F020202">
+                            <Rectangle HorizontalAlignment="Left" Height="20" Margin="0,-10,0,0" VerticalAlignment="Top" Width="20" Fill="#7F000000" RadiusX="10" RadiusY="10">
+                                <Rectangle.Clip>
+                                    <RectangleGeometry Rect="0,0,20,10"></RectangleGeometry>
+                                </Rectangle.Clip>
+                            </Rectangle>
+                        </Grid>
+
+    					<ScrollViewer Margin="0" VerticalScrollBarVisibility="Hidden">
+    						<StackPanel x:Name="ItemsStackPanel"/>
+    					</ScrollViewer>
+    				</Grid>
+    			</Grid>
+    		</PivotItem>
+    		<PivotItem Header="Nastavitve">
+    			<Grid>
+    				<StackPanel Margin="10,10,10,0" Orientation="Vertical">
+    					<ToggleSwitch x:Name="NotificationsSwitch" Margin="0" VerticalAlignment="Top" Foreground="#FF5A5A5A" RequestedTheme="Light" OffContent="Izklopljeno" OnContent="Vklopljeno" IsOn="True" Header="Opomnik" Toggled="NotificationsSwitch_Toggled"/>
+    					<Grid Height="65" Margin="0,20,0,0" VerticalAlignment="Top">
+    						<Grid.ColumnDefinitions>
+    							<ColumnDefinition/>
+    						</Grid.ColumnDefinitions>
+    						<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Podatki" VerticalAlignment="Top" Foreground="#FF758288" FontSize="16"/>
+    						<Button x:Name="DeleteButton" Content="Izbriši" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Bottom" RequestedTheme="Light" Foreground="#FF5A5A5A" MinWidth="0" MinHeight="0" Width="120" Click="DeleteButton_Click"/>
+    						<TextBlock HorizontalAlignment="Left" Margin="0,27,0,0" TextWrapping="Wrap" Text="Izbriši in začni znova" VerticalAlignment="Top" Foreground="#FF5A5A5A" FontSize="20"/>
+    					</Grid>
+    					<Grid Height="100" Margin="0,10,0,0" VerticalAlignment="Top">
+    						<Grid.ColumnDefinitions>
+    							<ColumnDefinition Width="80"/>
+    							<ColumnDefinition/>
+    						</Grid.ColumnDefinitions>
+    						<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Avtor" VerticalAlignment="Top" Foreground="#FF758288" FontSize="16"/>
+    						<Image HorizontalAlignment="Left" Height="50" Margin="0,30,0,0" VerticalAlignment="Top" Width="50" Source="Assets/avatar.png"/>
+    						<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="Žan Pevec" VerticalAlignment="Top" Foreground="#FF5A5A5A" FontSize="24"/>
+    						<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,61,0,0" TextWrapping="Wrap" Text="pevec@outlook.com" VerticalAlignment="Top" Foreground="#FF758288" FontSize="16"/>
+    					</Grid>
+    				</StackPanel>
+    			</Grid>
+    		</PivotItem>
+    	</Pivot>
+
+    </Grid>
+</Page>
