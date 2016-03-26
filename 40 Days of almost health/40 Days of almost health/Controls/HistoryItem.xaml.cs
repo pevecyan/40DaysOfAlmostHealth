@@ -40,47 +40,48 @@ namespace _40_Days_of_almost_health
         {
             DateValue.Text = new DateTime(historyDate).ToString("d.M.yyyy");
 
-            Icon0.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Icon1.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Icon2.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Icon3.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Icon4.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Icon5.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Icon6.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+        
+            Icon0Grid.Opacity=0.2;
+            Icon1Grid.Opacity=0.2;
+            Icon2Grid.Opacity=0.2;
+            Icon3Grid.Opacity=0.2;
+            Icon4Grid.Opacity=0.2;
+            Icon5Grid.Opacity=0.2;
+            Icon6Grid.Opacity=0.2;
 
             if ((historyValue - 1000000) >= 0)
             {
-                Icon6.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Icon6Grid.Opacity = 100;
                 historyValue -= 1000000;
             }
             if ((historyValue - 100000) >= 0)
             {
-                Icon5.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Icon5Grid.Opacity = 100;
                 historyValue -= 100000;
             }
             if ((historyValue - 10000) >= 0)
             {
-                Icon4.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Icon4Grid.Opacity = 100;
                 historyValue -= 10000;
             }
             if ((historyValue - 1000) >= 0)
             {
-                Icon3.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Icon3Grid.Opacity = 100;
                 historyValue -= 1000;
             }
             if ((historyValue - 100) >= 0)
             {
-                Icon2.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Icon2Grid.Opacity = 100;
                 historyValue -= 100;
             }
             if ((historyValue - 10) >= 0)
             {
-                Icon1.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Icon1Grid.Opacity = 100;
                 historyValue -= 10;
             }
             if ((historyValue - 1) >= 0)
             {
-                Icon0.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Icon0Grid.Opacity = 100;
                 historyValue -= 1;
             }
 

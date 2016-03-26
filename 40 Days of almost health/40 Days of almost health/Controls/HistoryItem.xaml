@@ -12,13 +12,13 @@
     <Grid Background="#34000000" Margin="20,0,5,0">
     	<TextBlock x:Name="DateValue" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" Text="11.5.1994" VerticalAlignment="Top" FontSize="16" RequestedTheme="Light"/>
     	<StackPanel Height="55" Margin="10,30,10,0" VerticalAlignment="Top" Orientation="Horizontal">
-    		<TextBlock x:Name="Icon1" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍰" FontSize="40" Visibility="Collapsed"/>
-    		<TextBlock x:Name="Icon2" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍬" FontSize="40" Visibility="Collapsed"/>
-    		<TextBlock x:Name="Icon3" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍫" FontSize="40" Visibility="Collapsed"/>
-    		<TextBlock x:Name="Icon4" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍔" FontSize="40" Visibility="Collapsed"/>
-    		<TextBlock x:Name="Icon5" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍸" FontSize="40" Visibility="Collapsed"/>
-    		<TextBlock x:Name="Icon6" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍕" FontSize="40" Visibility="Collapsed"/>
-    		<TextBlock x:Name="Icon0" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍎" FontSize="40" Visibility="Collapsed"/>
+            <Grid x:Name="Icon1Grid"><TextBlock x:Name="Icon1" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍰" FontSize="40"/></Grid>
+    		<Grid x:Name="Icon2Grid"><TextBlock x:Name="Icon2" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍬" FontSize="40"/></Grid>
+    		<Grid x:Name="Icon3Grid"><TextBlock x:Name="Icon3" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍫" FontSize="40"/></Grid>
+    		<Grid x:Name="Icon4Grid"><TextBlock x:Name="Icon4" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍔" FontSize="40"/></Grid>
+    		<Grid x:Name="Icon5Grid"><TextBlock x:Name="Icon5" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍸" FontSize="40"/></Grid>
+    		<Grid x:Name="Icon6Grid"><TextBlock x:Name="Icon6" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍕" FontSize="40"/></Grid>
+    		<Grid x:Name="Icon0Grid"><TextBlock x:Name="Icon0" HorizontalAlignment="Left" Margin="0,0,5,0" TextWrapping="Wrap" Text="🍎" FontSize="40"/></Grid>
     	</StackPanel>
 
     </Grid>

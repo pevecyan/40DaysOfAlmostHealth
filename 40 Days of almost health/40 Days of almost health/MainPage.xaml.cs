@@ -45,7 +45,7 @@ namespace _40_Days_of_almost_health
                 DateTime dateTime = new DateTime((long)settings.Values["StartDate"]);
                 int length = (int)settings.Values["StartLength"];
 
-                DaysLeftTextBlock.Text = ""+dateTime.AddDays(length).Subtract(DateTime.Now.ToUniversalTime()).Days;
+                DaysLeftTextBlock.Text = ""+dateTime.Date.AddDays(length).Subtract(DateTime.Now.ToUniversalTime()).Days;
 
                 if (DateTime.Now.ToUniversalTime().Subtract(dateTime).Ticks >= 0)
                 {
